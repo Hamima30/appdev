@@ -75,7 +75,7 @@ public class Randomizer extends AppCompatActivity {
             lottobet[3]=Integer.parseInt(txtPlace4.getText().toString());
             lottobet[4]=Integer.parseInt(txtPlace5.getText().toString());
             lottobet[5]=Integer.parseInt(txtPlace6.getText().toString());
-//            Toast.makeText(getApplicationContext(), Arrays.toString(lottobet),Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), Arrays.toString(lottobet),Toast.LENGTH_LONG).show();
         });
 
         btnStart.setOnClickListener(v->{
