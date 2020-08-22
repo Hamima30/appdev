@@ -20,8 +20,8 @@ public class Randomizer extends AppCompatActivity {
     TextView lblPrize,lblWin;
 
     Random rnd;
-    int lottobet[] = new int[6];
-    int lottoresult[]= new int[6];
+    int[] lottobet = new int[6];
+    int[] lottoresult = new int[6];
     EditText[] resultBalls;
     ArrayList<String> LottoBalls;
     InputFilterMinMaxInteger numfilter = new InputFilterMinMaxInteger(1,58);
@@ -60,6 +60,7 @@ public class Randomizer extends AppCompatActivity {
         txtStart5=findViewById(R.id.txtStart5);
         txtStart6=findViewById(R.id.txtStart6);
 
+        // Add filter to place bet boxes
         txtPlace1.setFilters(new InputFilter[]{numfilter});
         txtPlace2.setFilters(new InputFilter[]{numfilter});
         txtPlace3.setFilters(new InputFilter[]{numfilter});
@@ -75,21 +76,17 @@ public class Randomizer extends AppCompatActivity {
             lottobet[3]=Integer.parseInt(txtPlace4.getText().toString());
             lottobet[4]=Integer.parseInt(txtPlace5.getText().toString());
             lottobet[5]=Integer.parseInt(txtPlace6.getText().toString());
-//            Toast.makeText(getApplicationContext(), Arrays.toString(lottobet),Toast.LENGTH_LONG).show();
+            showMessage(Arrays.toString(lottobet));
         });
 
         btnStart.setOnClickListener(v->{
             if (lottoIndex==0){
-
                 generateLottoBalls();
-//
             }
-            Toast.makeText(getApplicationContext(), "test",Toast.LENGTH_LONG).show();
+            showMessage(LottoBalls.toString());
             startTime =System.currentTimeMillis();
             btnStart.setEnabled(false);
-
-//            setRandomInteger(resultBalls[lottoIndex]);
-
+            setRandomInteger(resultBalls[lottoIndex]);
         });
 
     }
@@ -115,16 +112,10 @@ public class Randomizer extends AppCompatActivity {
     }
 
     private void generateLottoBalls(){
-       try {
-           LottoBalls.clear();
-           for (int i=1; 1<=58;i++){
-               LottoBalls.add(i+"");
-
-           }
-       }catch (Exception e){
-           showMessage(e.getMessage());
-       }
-
+        LottoBalls.clear();
+        for (int i = 1; i <= 58; i++) {
+            LottoBalls.add(i + "");
+        }
     }
     private void removeLottoBall(EditText et){
         String lottoNumber = et.getText().toString();
