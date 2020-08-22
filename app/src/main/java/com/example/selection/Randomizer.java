@@ -76,14 +76,14 @@ public class Randomizer extends AppCompatActivity {
             lottobet[3]=Integer.parseInt(txtPlace4.getText().toString());
             lottobet[4]=Integer.parseInt(txtPlace5.getText().toString());
             lottobet[5]=Integer.parseInt(txtPlace6.getText().toString());
-            showMessage(Arrays.toString(lottobet));
+
         });
 
         btnStart.setOnClickListener(v->{
             if (lottoIndex==0){
                 generateLottoBalls();
             }
-            showMessage(LottoBalls.toString());
+
             startTime =System.currentTimeMillis();
             btnStart.setEnabled(false);
             setRandomInteger(resultBalls[lottoIndex]);
