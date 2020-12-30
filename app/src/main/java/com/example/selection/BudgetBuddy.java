@@ -14,9 +14,9 @@ public class BudgetBuddy extends AppCompatActivity implements View.OnClickListen
    Spinner spin;
    Button btnChoose;
 
-   protected void onCreate(Bundle savedInstaState) {
-       super.onCreate(savedInstaState);
-       setContentView(R.layout.activity_main);
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_budget_buddy);
 
        spin=findViewById(R.id.spin);
        btnChoose=findViewById(R.id.btnVersion);
