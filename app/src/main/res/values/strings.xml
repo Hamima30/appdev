@@ -54,4 +54,20 @@
         <item>Azurill</item>
         <item>Wynaut</item>
     </string-array>
+    <string-array name="version">
+        <item>Cupcake</item>
+        <item>Donut</item>
+        <item>Eclair</item>
+        <item>Froyo</item>
+        <item>Gingerbread</item>
+        <item>Honeycomb</item>
+        <item>Ice cream Sandwich</item>
+        <item>Jellybean</item>
+        <item>Kitkat</item>
+        <item>Lollipop</item>
+        <item>Marsmallow</item>
+        <item>Nougat</item>
+        <item>Oreo</item>
+        <item>Pia</item>
+    </string-array>
 </resources>

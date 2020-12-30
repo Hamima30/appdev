@@ -1,7 +1,5 @@
 package com.example.selection;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.InputFilter;
@@ -9,7 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
