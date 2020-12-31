@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.selection">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,13 +10,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_lto_registration">
-        <!-- <activity android:name=".Randomizer"></activity> -->
+
+        <activity android:name=".Selection" />
+        <activity android:name=".MyPet" />
+        <activity android:name=".LoopTimer" />
+        <activity android:name=".Randomizer" />
+        <activity android:name=".LTORegistration" />
+        <activity android:name=".UsingCheckBox" />
+        <activity android:name=".MyRadioButton" />
+        <activity android:name=".ViewWebsite" /> <!-- <activity android:name=".activity_lto_registration"> -->
         <!-- <activity android:name=".LoopTimer"></activity> -->
         <!-- <activity android:name=".MyPet"></activity> -->
         <!-- <activity android:name=".MainActivity" /> -->
         <!-- <activity android:name=".Randomizer"> -->
-<!--        <activity android:name=".BudgetBuddy">-->
+        <!-- <activity android:name=".BudgetBuddy"> -->
+        <activity android:name=".Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

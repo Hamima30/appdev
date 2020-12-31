@@ -8,11 +8,9 @@ import android.os.SystemClock;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Locale;
 import java.util.Timer;
-import java.util.TimerTask;
 
-public class LoopTimer extends AppCompatActivity {
+public class LoopTimer extends BaseActivity {
     TextView lblTimer,lblStartTime,lblEnd,lblElapse;
     Button btnStart,btnStop;
     Timer timer;
@@ -21,11 +19,21 @@ public class LoopTimer extends AppCompatActivity {
     boolean hasStarted =false;
 
     @Override
+    protected int getLayoutResId() {
+        return R.layout.activity_loop_timer;
+    }
+
+    @Override
+    protected String getActivityName() {
+        return "Activity 4";
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loop_timer);
+//        setContentView(R.layout.activity_loop_timer);
 
-        lblTimer=findViewById(R.id.lblTimer);
+        lblTimer=findViewById(R.id.txtBudget);
         lblStartTime=findViewById(R.id.lblStartTime);
         lblEnd=findViewById(R.id.lblEnd);
         lblElapse=findViewById(R.id.lblElapse);

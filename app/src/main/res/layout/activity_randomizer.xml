@@ -10,7 +10,7 @@
     tools:context=".Randomizer">
 
     <TextView
-        android:id="@+id/txtLotto"
+        android:id="@+id/txtDalano"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -24,7 +24,7 @@
         android:layout_height="20dp" />
 
     <EditText
-        android:id="@+id/txtName"
+        android:id="@+id/txtANL"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:ems="10"
@@ -33,7 +33,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/txtAmount"
+        android:id="@+id/txtFO"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

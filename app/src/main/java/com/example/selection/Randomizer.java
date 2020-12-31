@@ -8,10 +8,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
-public class Randomizer extends AppCompatActivity {
+public class Randomizer extends BaseActivity {
     EditText txtPlace1,txtPlace2,txtPlace3,txtPlace4,txtPlace5,txtPlace6,txtStart1,txtStart2,txtStart3,txtStart4,txtStart5,txtStart6,txtName,txtxAmounts;
     Button btnPlace,btnStart;
     TextView lblPrize,lblWin;
@@ -29,16 +28,26 @@ public class Randomizer extends AppCompatActivity {
     final double jackpot =50000000;
 
     @Override
+    protected int getLayoutResId() {
+        return R.layout.activity_randomizer;
+    }
+
+    @Override
+    protected String getActivityName() {
+        return "Activity 5";
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_randomizer);
+//        setContentView(R.layout.activity_randomizer);
 
         LottoBalls = new ArrayList<>();
 
         rnd = new Random();
 
-        txtName =findViewById(R.id.txtName);
-        txtxAmounts=findViewById(R.id.txtAmount);
+        txtName =findViewById(R.id.txtANL);
+        txtxAmounts=findViewById(R.id.txtFO);
         btnStart=findViewById(R.id.btnStart);
         btnPlace=findViewById(R.id.btnPlace);
         txtPlace1=findViewById(R.id.txtPlace1);
@@ -103,9 +112,6 @@ public class Randomizer extends AppCompatActivity {
                 }
         };
         myhandler.post(run);
-    }
-    private int randomNumber(int min, int max) {
-        return rnd.nextInt(max+1-min)+ min;
     }
 
     private void generateLottoBalls(){

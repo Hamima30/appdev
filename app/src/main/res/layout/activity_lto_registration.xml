@@ -7,7 +7,7 @@
     android:background="#2196F3"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".activity_lto_registration">
+    tools:context=".LTORegistration">
 
     <TextView
         android:layout_width="match_parent"

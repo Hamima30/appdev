@@ -15,9 +15,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import android.os.Bundle;
-
-public class activity_lto_registration extends AppCompatActivity {
+public class LTORegistration extends BaseActivity {
 
     EditText txtPlateNumber;
     Button btnCheck, btnClear, btnClose;
@@ -35,9 +33,19 @@ public class activity_lto_registration extends AppCompatActivity {
     private Calendar regDeadline;
 
     @Override
+    protected int getLayoutResId() {
+        return R.layout.activity_lto_registration;
+    }
+
+    @Override
+    protected String getActivityName() {
+        return "Activity 6";
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lto_registration);
+//        setContentView(R.layout.activity_lto_registration);
 
         // Initialize
         txtPlateNumber = findViewById(R.id.txtPlateNumber);
@@ -46,7 +54,7 @@ public class activity_lto_registration extends AppCompatActivity {
         btnClose = findViewById(R.id.btnClose);
 
         // Initialize Dialog
-        dialogResult = new DialogWith2Buttons("About vehicle", "OK", "Clear Plate", activity_lto_registration.this) {
+        dialogResult = new DialogWith2Buttons("About vehicle", "OK", "Clear Plate", LTORegistration.this) {
             @Override
             public void onPostiveClick() { }
             @Override
@@ -185,10 +193,6 @@ public class activity_lto_registration extends AppCompatActivity {
 
     private int getYear(){
         return Calendar.getInstance().get(Calendar.YEAR);
-    }
-
-    private void MsgBox(String message){
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
     }
 
     public static void hideSoftKeyboard(Activity activity) {
